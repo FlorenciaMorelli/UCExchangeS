@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="30dp"
+    android:paddingHorizontal="20sp"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <!-- View Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:text="@string/app_title"
+        android:textSize="30sp"
+        android:textColor="@color/primary"
+        android:textAlignment="center"
+        />
+
+    <!-- From currency Layout -->
+    <LinearLayout
+        android:id="@+id/ll_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+
+        <!-- Entry title -->
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <!-- Dropdown menu -->
+        <Spinner
+            android:id="@+id/sp_from"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/primary"
+            />
+    </LinearLayout>
+
+    <!-- "Convert to" Layout -->
+    <LinearLayout
+        android:id="@+id/ll_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ll_from"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+
+        <!-- To title -->
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <!-- Currency picker -->
+        <Spinner
+            android:id="@+id/sp_to"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/primary"
+            />
+
+    </LinearLayout>
+
+    <!-- Amount layout -->
+    <LinearLayout
+        android:id="@+id/ll_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ll_to"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+
+        <!-- Amount title -->
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:textColor="@color/primary"
+            android:textSize="22sp"
+            />
+
+        <!-- Decimal number input -->
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="numberDecimal"
+            android:importantForAutofill="no"
+            android:textColor="@color/primary"
+            android:shadowColor="@color/primary"
+            tools:ignore="LabelFor" />
+
+    </LinearLayout>
+
+
+    <!-- Action button -->
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_amount"
+        android:layout_marginTop="50dp"
+
+        android:background="@color/primary"
+        android:textColor="@color/white"
+        android:text="@string/btn_convert"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

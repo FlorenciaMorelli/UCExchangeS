@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">UCExchangeS</string>
+    <!-- Main Activity -->
+    <string name="app_title">Conversor de moneda</string>
+    <string name="from">De:</string>
+    <string name="to">A:</string>
+    <string name="amount">Cantidad:</string>
+    <string name="btn_convert">convertir</string>
+    <!-- Second Activity -->
+    <string name="result_title">Resultado de la conversión</string>
+    <string name="amount_converted">Cantidad ingresada</string>
+    <string name="currency_from">Moneda original</string>
+    <string name="btn_back">volver</string>
+
+    <!-- Currency list -->
+    <string-array name="currencies">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>ARG</item>
+        <item>UYU</item>
+    </string-array>
+</resources>
